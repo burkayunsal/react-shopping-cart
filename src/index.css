@@ -50,3 +50,69 @@ footer{
   justify-content: center;
   align-items: center;
 }
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main{
+  flex: 3 60rem;
+}
+
+.sidebar{
+  flex: 1 20rem;
+}
+
+/* items */
+
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.items li{
+  flex: 0 1 29rem;
+  height: 47rem;
+  padding: 1rem;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: deepskyblue;
+  margin-top: 2rem;
+}
+
+
+.button{
+  padding: 1rem;
+  border: 0.1rem deepskyblue;
+  background-color: aliceblue;
+  cursor: pointer;
+  border-radius: 2rem;
+  text-align: center;
+  flex: 1;
+  width: 100%;
+}
+
+.button.primary{
+  background-color: deepskyblue;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+}
