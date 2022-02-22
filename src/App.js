@@ -78,7 +78,7 @@ class App extends React.Component {
             <Provider store={store}>
                 <div className="grid-container">
                     <header>
-                        <a href="/">React Product Listing App</a>
+                        Market
                     </header>
                     <main>
                         <div className="content">
