@@ -1,4 +1,5 @@
-[
+{
+  "products": [
   {
     "tags": [
       "Trees"
@@ -23604,3 +23605,4 @@
     "itemType": "shirt"
   }
 ]
+}

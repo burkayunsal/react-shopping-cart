@@ -1,4 +1,4 @@
-html{
+ html{
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -27,10 +27,14 @@ a:hover{
 
 header{
   grid-area:header;
-  background-color: #203040;
+  background-color: deepskyblue;
   color: white;
   display: flex;
-  align-items: center; padding: .5rem;
+  align-items: center;
+  padding: .5rem;
+  text-align: center;
+  font-family: Charter;
+  font-size: 2rem;
 }
 
 header a{
@@ -56,15 +60,19 @@ footer{
   flex-wrap: wrap;
 }
 
+.filters{
+flex: 1;
+}
+
 .main{
-  flex: 3 60rem;
+  flex: 4;
 }
 
 .sidebar{
-  flex: 1 20rem;
+  flex: 1;
 }
 
-/* items */
+/* products */
 
 .items{
   display: flex;
@@ -78,41 +86,95 @@ footer{
 
 .items li{
   flex: 0 1 29rem;
-  height: 47rem;
   padding: 1rem;
 }
 
 .item{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .item-price{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  color: deepskyblue;
+  color: #2393df;
   margin-top: 2rem;
 }
 
 
-.button{
-  padding: 1rem;
-  border: 0.1rem deepskyblue;
-  background-color: aliceblue;
+.btn{
+  padding: 0.5rem;
+  margin: 2rem;
   cursor: pointer;
   border-radius: 2rem;
   text-align: center;
   flex: 1;
-  width: 100%;
+  font-size: 1.25rem;
 }
 
-.button.primary{
-  background-color: deepskyblue;
+.add-button{
+  background-color: #2393df;
 }
 
 .image-container{
   display: flex;
   justify-content: center;
+}
+
+.sorting-input{
+  width: 100%;
+}
+ 
+.cart{
+padding: 1rem;
+margin: 1rem;
+display: flex;
+flex: 1;
+}
+
+.cart-header{
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.cart-items{
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  
+}
+
+.cart-items li {
+  display: flex;
+  border-bottom: 0.1rem #e0e0e0 solid;
+}
+
+.cart-items div {
+padding: 0.5rem;
+}
+
+.cart-items div:last-child {
+  flex: 1;
+}
+
+.right{
+  text-align: right;
+}
+
+.btn-outline-danger, .btn-outline-success {
+  font-size: larger;
+}
+
+.card-border{
+  border: 1rem #2393df solid;
+}
+
+.color{
+  color:#2393df;
+}
+
+.center{
+  text-align: center;
+  margin: auto;
 }

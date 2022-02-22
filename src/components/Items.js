@@ -1,36 +1,38 @@
 import React, {Component} from 'react';
-import {connect} from "react-redux";
+import { connect } from 'react-redux';
+import { fetchProducts } from '../actions/itemActions';
 import formatCurrency from "../util";
 
-class Items extends Component {
+ class Items extends Component {
+
+	componentDidMount() {
+		this.props.fetchProducts();
+	}
+
 	render() {
-		const { items } = this.props;
 		return (
 			<div>
+				{ !this.props.products ? <div>Loading...</div> : (
 				<ul className="items">
-					{items.map( (item) => (
-						<li key={item.added}>
-							<div className="item">
-								<div className='image-container'>
-									<img src='https://via.placeholder.com/140x100' alt="item" />
+							{this.props.products.map(product => (
+								<li key={product.added}> 
+								<div className="item">
+									<div className='image-container'>
+										<img src='https://via.placeholder.com/140x100' alt={product.name} />
+									</div>
+									<div className="item-price">
+										{formatCurrency(product.price)}
+									</div>
+									<p className='center'>{product.name}</p>
+									<button onClick={() => this.props.addToBasket(product)} className="btn add-button text-bold">Add</button>
 								</div>
-								<div className="item-price">
-									 {formatCurrency(item.price)}
-								</div>
-								<p>{item.name}</p>
-								<button className="button primary">Add</button>
-							</div>
-						</li>
-					))}
+							</li>
+							))}
 				</ul>
+				)}
 			</div>
 		);
 	}
 }
 
-const mapStateToProps = (state) => {
-	const {items} = state;
-	return {items}
-}
-
-export default connect(mapStateToProps)(Items);
+  export default connect((state)=>({products : state.products.items}),{fetchProducts})(Items);
